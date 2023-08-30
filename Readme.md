@@ -16,14 +16,14 @@ Incorporating advanced technologies and strategies, the project focuses on effic
 
 ### Usage
 
-Go to service folder do `npm install` and after that you can start project with command `npm run start`
-Go to `localhost:3000`
+Go to service folder do `npm install` and after that you can start project with command `npm run start`.
+<br/>
+Go to `localhost:3000`.
 
 #### Stack
 
 -   React
 -   Typescript
--   Jest
 
 ## Tracking Service
 
@@ -63,9 +63,9 @@ Event unit:
 
 ### Usage
 
-Need to create in a root of the service `.env` file in a root of the service with that parameter `API=http://0.0.0.0:8001/`
-
-Go to service folder do `npm install` and after that you can start project with command `npm run start`
+Need to create in a root of the service `.env` file in a root of the service with that parameter `API=http://0.0.0.0:8001/`.
+<br/>
+Go to service folder do `npm install` and after that you can start project with command `npm run start`.
 
 #### Stack
 
@@ -118,16 +118,15 @@ The project's commitment to empowering informed decision-making is epitomized by
 
 ### Usage
 
-Need to create in a root of the service `.env` file in a root of the service with that parameter `API=http://0.0.0.0:8001/`
-Go to service folder do `npm install` and after that you can start project with command `npm run start`
-
+Need to create in a root of the service `.env` file in a root of the service with that parameter `API=http://0.0.0.0:8001/`.
+Go to service folder do `npm install` and after that you can start project with command `npm run start`.
+<br/>
 Go to `localhost:3001`
 
 #### Stack
 
 -   React
 -   Typescript
--   Jest
 
 ## Docker Compose
 
@@ -141,7 +140,7 @@ Make sure you have Docker and Docker Compose installed on your system.
 
 Ensure that the directory structure matches what's described in the Docker Compose file. You should have subdirectories for each service (e.g., WebsiteService, DashboardService, TrackingService, ApiService), each containing their respective source code and Dockerfiles.
 
-####Configuration File:
+#### Configuration File:
 
 Save the provided Docker Compose configuration in a file named docker-compose.yml in the root directory of your project.
 
