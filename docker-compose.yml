@@ -1,0 +1,92 @@
+version: '3'
+services:
+    frontend:
+        build:
+            context: ./WebsiteService
+            dockerfile: Dockerfile
+        ports:
+            - 3000:3000
+        container_name: perion-website-ui
+        networks:
+            - perion-stack-net
+        volumes:
+            - ./WebsiteService/src:/usr/app/src
+        depends_on:
+            - event_track
+        stdin_open: true
+        tty: true
+
+    dashboard:
+        environment:
+            REACT_APP_API: http://api_service:8001
+        build:
+            context: ./DashboardService
+            dockerfile: Dockerfile
+        ports:
+            - 3001:3001
+        container_name: perion-dashboard-ui
+        networks:
+            - perion-stack-net
+        volumes:
+            - ./DashboardService/src:/usr/app/src
+        depends_on:
+            - event_track
+        stdin_open: true
+        tty: true
+
+    event_track:
+        environment:
+            API: http://api_service:8001
+        build:
+            context: ./TrackingService
+            dockerfile: Dockerfile
+        ports:
+            - 4010:4010
+        container_name: perion-tracker
+        networks:
+            - perion-stack-net
+        volumes:
+            - ./TrackingService:/usr/app/src
+        depends_on:
+            - db
+    db:
+        image: postgres:15-alpine
+        environment:
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: password
+            POSTGRES_DB: newdb
+            PGDATA: /data/postgres
+        ports:
+            - 5432:5432
+        container_name: postgress-db
+        volumes:
+            - db:/data/postgres
+        networks:
+            - perion-stack-net
+
+    api_service:
+        environment:
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: password
+            POSTGRES_SERVER: db
+            POSTGRES_PORT: 5432
+            POSTGRES_DB: newdb
+        build:
+            context: ./ApiService
+            dockerfile: Dockerfile
+        ports:
+            - 8001:8001
+        container_name: perion-api
+        networks:
+            - perion-stack-net
+        volumes:
+            - ./ApiService:/app
+        depends_on:
+            - db
+
+networks:
+    perion-stack-net:
+        driver: bridge
+
+volumes:
+    db:

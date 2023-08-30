@@ -1,0 +1,15 @@
+.Card {
+    background: var(--black300);
+    color: var(--white100);
+    padding: 18px;
+    border-radius: 8px;
+    display: flex;
+}
+.ImageCard img {
+    border-radius: 50%;
+}
+.CardInfo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}

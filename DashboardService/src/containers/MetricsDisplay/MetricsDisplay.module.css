@@ -1,0 +1,16 @@
+.MetricsDisplay {
+    max-width: 600px;
+    display: flex;
+    margin: 40px auto;
+    border-radius: 8px;
+    border: 1px solid var(--black100);
+    padding: 18px;
+    width: 100%;
+    flex-direction: column;
+}
+.ListEvents {
+    display: flex;
+
+    flex-direction: column;
+    flex: 0 0 30%;
+}

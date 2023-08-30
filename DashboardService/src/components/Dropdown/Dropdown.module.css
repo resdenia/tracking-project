@@ -1,0 +1,46 @@
+.DropdownList {
+    list-style: none;
+    border: 1px solid var(--black200);
+    padding: 10px 0px;
+    position: absolute;
+    z-index: 1000;
+    background: var(--black200);
+    width: 100%;
+    margin-top: 3px;
+    border-radius: 3px;
+    display: none;
+    flex-direction: column;
+}
+.DropdownList.open {
+    display: flex;
+    max-height: 345px;
+    overflow: scroll;
+    max-width: 300px;
+    width: 100%;
+    top: 50px;
+}
+.dropdownListEl {
+    padding: 8px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--white100);
+}
+.dropdownListEl:hover {
+    background-color: var(--blue300);
+}
+.IconWrapper {
+    background-color: var(--black200);
+}
+
+.LabelWrapper {
+    display: flex;
+    padding: 15px;
+    border-radius: 5px;
+    color: var(--white100);
+    background: var(--black600);
+    cursor: pointer;
+}

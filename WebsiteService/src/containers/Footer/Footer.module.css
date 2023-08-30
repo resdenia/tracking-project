@@ -1,0 +1,14 @@
+.Footer {
+    margin-top: 20px;
+    display: flex;
+    border-radius: 8px;
+    background: var(--bg-color);
+    padding: 8px 12px;
+    color: var(--white-color);
+}
+
+.adFooter {
+    width: 728px;
+    height: 90px;
+    background-color: var(--white-color);
+}

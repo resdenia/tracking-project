@@ -1,0 +1,27 @@
+.container {
+    position: relative;
+    display: flex;
+    max-width: 1440px;
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.mainRow {
+    margin-top: 20px;
+    display: flex;
+    flex-grow: 1;
+}
+
+.main {
+    border: 1px solid var(--text-color);
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+}

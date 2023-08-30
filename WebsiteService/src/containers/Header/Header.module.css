@@ -1,0 +1,43 @@
+.Header {
+    background-color: var(--secondary-bg-color);
+    color: var(--white-color);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 8px 15px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.Logo {
+    display: flex;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menuList {
+    list-style: none;
+    margin-right: 12px;
+    display: flex;
+}
+
+.menuItem {
+    margin-right: 12px;
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.adBanner {
+    width: 360px;
+    height: 50px;
+    background-color: var(--white-color);
+}
