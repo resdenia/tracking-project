@@ -49,8 +49,10 @@ services:
             - ./TrackingService:/usr/app/src
         depends_on:
             - db
+            - api_service
     db:
         image: postgres:15-alpine
+        restart: always
         environment:
             POSTGRES_USER: root
             POSTGRES_PASSWORD: password
