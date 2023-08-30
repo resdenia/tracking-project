@@ -185,7 +185,7 @@ docker-compose down
 -   Make Dashboard more rich
 -   Configure Google Ad manager
 -   Add more events to track
--   Cover test
+-   Cover tests
 
 ## Releases
 
