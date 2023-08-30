@@ -119,6 +119,7 @@ The project's commitment to empowering informed decision-making is epitomized by
 ### Usage
 
 Need to create in a root of the service `.env` file in a root of the service with that parameter `API=http://0.0.0.0:8001/`.
+<br/>
 Go to service folder do `npm install` and after that you can start project with command `npm run start`.
 <br/>
 Go to `localhost:3001`
